@@ -1,4 +1,4 @@
-# Train a hierarchical semantic segmentation model on the Pascal-part dataset.
+# Hierarchical semantic segmentation on the Pascal-part dataset.
 
 Some results:
 <p align="center">
@@ -7,7 +7,7 @@ Some results:
 
 ### Data
 
-[[GDrive dataset](https://drive.google.com/file/d/1llsnhnfHIypQDmGNB9vl5Yvwjir-zZwU/view?usp=sharing)]
+[[Google Drive dataset](https://drive.google.com/file/d/1llsnhnfHIypQDmGNB9vl5Yvwjir-zZwU/view?usp=sharing)]
 [[Original dataset](http://roozbehm.info/pascal-parts/pascal-parts.html)]
 
 The `JPEGImages` folder contains source images in jpeg format. The `gt_masks` folder contains segmentation masks in numpy format.
@@ -25,8 +25,8 @@ There are 7 classes in the dataset, which have the following hierarchical struct
         ├── (3) low_leg
         └── (5) up_leg
 ```
-For each nesting level, it is proposed to calculate the metric separately.
-Main metric: mean Intersection over Union (mIoU).
+For each nesting level, it is proposed to calculate the metric separately.  
+Main metric: mean Intersection over Union (mIoU).  
 Additional metric: Pixel Accuracy.
 
 Finally, the metric values of the resulting model are evaluated in 3 body-level categories:
@@ -34,11 +34,13 @@ Finally, the metric values of the resulting model are evaluated in 3 body-level 
 * Middle level mIou<sup>1</sup> - `upper_body`, `lower_body`
 * Bottom level mIoU<sup>2</sup> - `low_hand`, `up_hand`, `torso`, `head`, `low_leg`, `up_leg`
 
-Data...
+### Getting started
+
+Download Pascal-part dataset, save the train, val and test data to the appropriate folders - еach folder should contain original jpg-images and their corresponding png-masks.
 
 ### Train
 
-Training pipeline presented in a <a href="https://github.com/PlaeryinBol/Heirarchical_segmentation/Demo.ipynb">`Demo.ipynb`</a>
+Training pipeline presented in a <a href="https://github.com/PlaeryinBol/Heirarchical_segmentation/blob/main/Demo.ipynb">`Demo.ipynb`</a>
 
 ### Experiments
 
@@ -52,11 +54,11 @@ Training pipeline presented in a <a href="https://github.com/PlaeryinBol/Heirarc
 |  DeepLabV3  |     mobilenet_v2  | 512x512 | 29 | 0.393 | 0.422 | 0.286 | 0.492  |
 |  FPN  |     mobilenet_v2  | 512x512 | 21 | 0.376 | 0.405 | 0.263 | 0.478  |
 
-Various sets of data augmentations also have been tested.
+Various sets of data augmentations also have been tested.  
 Best method: DeepLabV3 with mobilenet_v2 backbone, Top mIoU = 0.393, Middle mIoU = 0.422, Bottom mIoU = 0.286, [[weights](https://drive.google.com/file/d/1DXsWpWbTueSY6f_zobAqoyX5flp15lzV/view?usp=share_link)].
 
 ### Ideas for improving results
-1. Оформление кода на github.
+1. 
 2. Оформление результатов.
 3. Структура репозитория.
 4. Соответствие решения тестовому заданию.
