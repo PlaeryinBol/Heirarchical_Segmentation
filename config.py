@@ -7,13 +7,15 @@ VAL_IDS = './data/Pascal-part/val_id.txt'
 
 # data
 TEST_SIZE = 0.42
-CLASSES = {0: 'bg',
+CLASSES = {
+            0: 'bg',
             1: 'low_hand',
             2: 'torso',
             3: 'low_leg',
             4: 'head',
             5: 'up_leg',
-            6: 'up_hand'}
+            6: 'up_hand'
+            }
 TOP_LEVEL = (1, 2, 3, 4, 5, 6)  # all body
 MIDDLE_LEVEL = (1, 2, 4, 6)  # hands, torso, head
 BOTTOM_LEVEL = (3, 5)  # legs

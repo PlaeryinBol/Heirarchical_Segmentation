@@ -14,28 +14,27 @@ class BodyPartDataset(Dataset):
         self.transform = transform
         self.mean = mean
         self.std = std
-        
+
     def __len__(self):
         return len(self.samples)
-    
+
     def __getitem__(self, idx):
         img = cv2.imread(self.samples[idx])
         img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
         mask = cv2.imread(self.samples[idx][:-4] + '.png', cv2.IMREAD_GRAYSCALE)
-        
+
         if self.transform is not None:
             aug = self.transform(image=img, mask=mask)
             img = Image.fromarray(aug['image'])
             mask = aug['mask']
-        
+
         if self.transform is None:
             img = Image.fromarray(img)
-        
+
         if not self.test:
             t = T.Compose([T.ToTensor(), T.Normalize(self.mean, self.std)])
             img = t(img)
-        
+
         mask = torch.from_numpy(mask).long()
-            
+
         return img, mask
-    
