@@ -62,7 +62,7 @@ Various sets of data augmentations also have been tested.
 
 Best method: **DeepLabV3** with **mobilenet_v2** backbone.  
 Top mIoU = **0.393**, Middle mIoU = **0.422**, Bottom mIoU = **0.286**.  
-Model weights can be downloaded [[here](https://drive.google.com/file/d/1DXsWpWbTueSY6f_zobAqoyX5flp15lzV/view?usp=share_link)].
+Model weights can be downloaded [here](https://drive.google.com/file/d/1DXsWpWbTueSY6f_zobAqoyX5flp15lzV/view?usp=share_link).
 
 ### Ideas for improving results
 1. **Dataset**
