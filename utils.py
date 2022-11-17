@@ -65,6 +65,8 @@ def get_lr(optimizer):
 
 
 def fit(epochs, model, device, train_loader, val_loader, criterion, optimizer, scheduler, exp_name):
+    if not os.path.exists('./models'):
+        os.mkdir('./models')
     torch.cuda.empty_cache()
     train_losses = []
     test_losses = []

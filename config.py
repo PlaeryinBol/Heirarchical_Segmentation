@@ -1,9 +1,9 @@
 # dirs & files
-IMAGE_DIR = './Pascal-part/JPEGImages'
-MASK_DIR = './Pascal-part/gt_masks'
+IMAGE_DIR = './data/Pascal-part/JPEGImages'
+MASK_DIR = './data/Pascal-part/gt_masks'
 MODELS_DIR = './models'
-TRAIN_IDS = './Pascal-part/train_id.txt'
-VAL_IDS = './Pascal-part/val_id.txt'
+TRAIN_IDS = './data/Pascal-part/train_id.txt'
+VAL_IDS = './data/Pascal-part/val_id.txt'
 
 # data
 TEST_SIZE = 0.42

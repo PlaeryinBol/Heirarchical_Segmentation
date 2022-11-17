@@ -1,0 +1,9 @@
+matplotlib==3.4.2
+numpy==1.21.4
+opencv_python_headless==4.5.2.54
+Pillow==9.3.0
+torch==1.8.1+cu111
+torchvision==0.9.1+cu111
+tqdm==4.61.0
+segmentation-models-pytorch==0.3.0
+albumentations==1.1.0
