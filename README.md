@@ -71,7 +71,7 @@ Model weights can be downloaded [here](https://drive.google.com/file/d/1DXsWpWbT
     * Check dataset stats: verify classes ratio, find possible data outliers, control classes ratio in train/val/test
     * Find which dataset samples existed model always segments badly, check that these data are correct or re-label/remove them
 2. **Model**
-    * Try another SOTA architectures from [link](https://paperswithcode.com/task/human-part-segmentation)
+    * Try another SOTA architectures from [link](https://paperswithcode.com/task/human-part-segmentation), try to use an ensemble of models
     * Explore the latest potentially useful papers ([paper 1](https://arxiv.org/pdf/2102.01460.pdf), [paper 2](https://arxiv.org/pdf/2101.06175v1.pdf), [paper 3](https://arxiv.org/pdf/2105.11168.pdf), [paper 4](https://arxiv.org/pdf/2106.05897.pdf))
     * Look at the Kaggle segmentation competitions and etc., try useful tricks and good ideas ([link](https://mmsegmentation.readthedocs.io/en/latest/tutorials/training_tricks.html))
 3. **Finetune**
